@@ -19,18 +19,32 @@
         <h1 id="title" class="col-sm-12"> CHAT</h1>  
         
         <div id="chat" class="col-sm-12">
+           <!-- <div class="message-box">
+                <div class="message-template left">
+                    <img src="img/icon-person.png">
+                    <p>Lorem Ipsum</p>
+                    <p class="left">16:55</p>
+                </div>  
+            </div>
             
-            <div class="message-template">
-                <img src="img/icon-person.png">
-                <p>Lorem Ipsum</p>
-                <p>16:55</p>
-            </div>  
-            
+            <div class="message-box">
+                <div class="message-template right">
+                    <img src="img/icon-person.png">
+                    <p>Lorem Ipsum</p>
+                    <p class="right">16:55</p>
+                </div> 
+            </div>
+        -->
         </div>
         
         <div id="inputs" class="col-sm-12">
                 <div class="chat-input">
-                <input id="input1" type="text" name="input1" autocomplete="off" autofocus>
+                <input id="inputleft" type="text" name="inputleft" autocomplete="off" autofocus onkeypress="InputLeft">
+                <img src="img/icon-send.png">
+                </div>
+            
+                <div class="chat-input">
+                <input id="inputright" type="text" name="inputright" autocomplete="off" autofocus onkeypress="InputRight">
                 <img src="img/icon-send.png">
                 </div>
         </div>

@@ -28,6 +28,7 @@ h1{
     overflow-y: scroll;
 }
 
+
 #inputs {
     width: 100%;
     height: 400px;
@@ -35,10 +36,12 @@ h1{
     margin: 0 auto;
     border: 5px solid;
     border-top: 0;
+    text-align: center;
 }
 
 .chat-input {
     padding: 20px;
+    display:inline-block;
 }
 
 .chat-input input {
@@ -47,16 +50,21 @@ h1{
     height: 2em;
 }
 
+.message-box {
+    height: auto;
+    padding: 10px;
+}
+
 .message-template {
     border: 1px solid black;
     padding: 10px;
     display: inline-block;
-    width: 30em;
+    width: 50%;
     height: auto;
+    overflow-wrap: break-word;
 }
 
 .message-template img {
-    float: left;
     padding-top: 5px;
     padding-right: 10px;
     vertical-align: middle;
@@ -67,4 +75,24 @@ h1{
     text-align: justify;
 }
 
+.left {
 
+}
+
+.left img {
+    float: left;
+}
+
+.right {
+    margin-left: 50%;
+}
+
+.right p {
+    text-align: right;
+}
+
+.right img {
+    padding-left: 10px;
+    padding-right: 0;
+    float: right;
+}
