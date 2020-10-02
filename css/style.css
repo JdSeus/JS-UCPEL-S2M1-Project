@@ -39,12 +39,21 @@ h1{
     text-align: center;
 }
 
+.send-icon {
+    border: 1px solid black;
+    width: 40px;
+    vertical-align: middle;
+}
+
+
 .chat-input {
+    width: auto;
     padding: 20px;
     display:inline-block;
 }
 
 .chat-input input {
+    padding: 3px;
     border: 1px gray;
     border-radius: 4px;
     height: 2em;

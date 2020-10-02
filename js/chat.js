@@ -55,6 +55,11 @@ window.onload = function() {
         document.getElementById("chat").appendChild(chatbox);
     }
     
+    function updateScroll() {
+        var elem = document.getElementById('chat');
+        elem.scrollTop = elem.scrollHeight;
+    }
+    
     document.getElementById("inputleft").onkeypress = function() {
         
         var keypressed = event.keyCode;
@@ -62,8 +67,12 @@ window.onload = function() {
         if (keypressed == 13)
             {
                 var text = document.getElementById("inputleft").value;
-                createChatBox(text, 1);
-                document.getElementById("inputleft").value = "";
+                if (text != "")
+                {
+                    createChatBox(text, 1);
+                    document.getElementById("inputleft").value = "";
+                    updateScroll();
+                }
             }
     }
     
@@ -74,10 +83,36 @@ window.onload = function() {
         if (keypressed == 13)
             {
                 var text = document.getElementById("inputright").value;
-                createChatBox(text, 2);
-                document.getElementById("inputright").value = "";
+                if (text != "")
+                {
+                    createChatBox(text, 2);
+                    document.getElementById("inputright").value = "";
+                    updateScroll();
+                }
             }
     }
+    
+    document.getElementById("send-left").onclick = function () {
+        
+        var text = document.getElementById("inputleft").value;
+        if (text != "")
+        {
+            createChatBox(text, 1);
+            document.getElementById("inputleft").value = "";
+            updateScroll();
+        }
+    }
+    
+    document.getElementById("send-right").onclick = function () {
+        
+        var text = document.getElementById("inputright").value;
+        if (text != "")
+        {
+            createChatBox(text, 2);
+            document.getElementById("inputright").value = "";
+            updateScroll();
+        }
+    }   
     
     
 }
