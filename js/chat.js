@@ -26,8 +26,18 @@ window.onload = function() {
         var messagetemplate = document.createElement("div");
         var chaticon = document.createElement("img");
         var messageFather = document.createElement("p");
-        var messageChild = document.createTextNode(message);
+        var messageChild;
+        if (side == 1)
+            {
+                messageChild = document.createTextNode("Lorem: " + message);
+            }
+        else 
+            {
+                messageChild = document.createTextNode("Ipsum: " + message);
+            }
+        
         var dateFather = document.createElement("p");
+        
         var dateChild = document.createTextNode(getTime());
         
         chatbox.className = "message-box";
@@ -63,33 +73,40 @@ window.onload = function() {
     document.getElementById("inputleft").onkeypress = function() {
         
         var keypressed = event.keyCode;
+        var text = document.getElementById("inputleft").value;
         
-        if (keypressed == 13)
-            {
-                var text = document.getElementById("inputleft").value;
-                if (text != "")
+        if (text != "")
+        { 
+            if (keypressed == 13)
                 {
+                    
                     createChatBox(text, 1);
                     document.getElementById("inputleft").value = "";
                     updateScroll();
                 }
-            }
+            else
+                {
+                    var count = document.getElementById("console-chat").children().length;
+                    alert(count);
+                }
+        }
     }
     
     document.getElementById("inputright").onkeypress = function() {
         
         var keypressed = event.keyCode;
+        var text = document.getElementById("inputright").value;
         
-        if (keypressed == 13)
-            {
-                var text = document.getElementById("inputright").value;
-                if (text != "")
+        if (text != "")
+        { 
+            if (keypressed == 13)
                 {
+                    
                     createChatBox(text, 2);
                     document.getElementById("inputright").value = "";
                     updateScroll();
                 }
-            }
+        }
     }
     
     document.getElementById("send-left").onclick = function () {
