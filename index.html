@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     
+    <!-- Meu Estilo -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
     
     
@@ -18,44 +19,31 @@
     <main class="container">
         <h1 id="title" class="col-sm-12"> CHAT</h1>  
         
-        <div id="chat" class="col-sm-12">
-            <div class="message-box">
-                <div class="message-template left">
-                    <img src="img/icon-person.png">
-                    <p>Lorem Ipsum</p>
-                    <p class="left">Lorem<br>16:55</p>
-                </div>  
-            </div>
+        <!-- CAIXA DO CHAT -->
+        <div id="chat" class="col-sm-12"> <!-- -->
             
-            <div class="message-box">
-                <div class="message-template right">
-                    <img src="img/icon-person.png">
-                    <p>Lorem Ipsum</p>
-                    <p class="right">Ipsum<br>16:55</p>
-                </div> 
-            </div>
-            
-        
         </div>
         
+        <!-- PARTE QUE MOSTRA AS ETICIÊNCIAS -->
         <div id="console-chat" class="col-sm-12">
             <div class="console-left">
-                <img src="img/writing-animation.gif">
+                <img id="animation-left" src="img/writing-animation.gif">
             </div>
             <div class="console-right">
-                <img src="img/writing-animation.gif">
+                <img id="animation-right" src="img/writing-animation.gif">
             </div> 
         </div>
         
+        <!-- INPUTS DO CÓDIGO -->
         <div id="inputs" class="col-sm-12">
                 <div class="chat-input">
-                <input id="inputleft" type="text" name="inputleft" autocomplete="off" autofocus onkeypress="InputLeft" size="50">
-                <img class="send-icon" id="send-left" src="img/icon-send.png">
+                <input id="inputleft" type="text" name="inputleft" autocomplete="off" autofocus size="50">
+                <div class="send-icon" id="send-left" src="img/icon-send.png"></div>
                 </div>
             
                 <div class="chat-input">
-                <input id="inputright" type="text" name="inputright" autocomplete="off" autofocus onkeypress="InputRight" size="50">
-                <img class="send-icon" id="send-right" src="img/icon-send.png">
+                <input id="inputright" type="text" name="inputright" autocomplete="off" autofocus size="50">
+                <div class="send-icon" id="send-right" src="img/icon-send.png"></div>
                 </div>
         </div>
         
