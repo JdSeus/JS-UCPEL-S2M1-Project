@@ -160,7 +160,7 @@ window.onload = function() {
         
         if (text.trim().length > 0)
         {
-            createChatBox(text, 1);
+            createChatBox(text, 1, "Ipsum");
         }
     }
     
@@ -170,7 +170,7 @@ window.onload = function() {
         
         if (text.trim().length > 0)
         {
-            createChatBox(text, 2);
+            createChatBox(text, 2, "Lorem");
 
         }
     }   
